@@ -1,4 +1,4 @@
-#Spark/PySpark - Atividades com Banco de Dados de Loja do Varejo (Produtos de Ciclismo)
+# Spark/PySpark - Atividades com Banco de Dados de Loja do Varejo (Produtos de Ciclismo)
 
 >Resolução de problemas de negócio e soluções de atividades envolvendo banco de dados de uma loja do varejo. Atividades realizadas junto ao curso "Formação Spark com Pyspark : O Curso Completo [2022]"
 
@@ -23,7 +23,7 @@ Para realizar as atividades propostas, utilizou-se da seguinte estrutura:
 
 ## Desafios Propostos: 
 
-###Atividade 1:
+### Atividade 1:
 
 * Importar dos dados das tabelas para o pyspark (arquivos parquet);
 
