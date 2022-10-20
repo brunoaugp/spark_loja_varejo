@@ -4,22 +4,20 @@ from pyspark.sql.functions import *
 from pyspark.sql.functions import expr
 from pyspark.sql.types import *
 
-
-# 1. Criar um baco de dados no DW do Spark nomeado VendasVarejo e persistir todas tabelas no BD;
+# 1. Criar um banco de dados no DW do Spark nomeado VendasVarejo e persistir todas tabelas no BD;
 
 spark.sql("create database VendasVarejo")
 spark.sql("show databases").show()
 spark.sql("use VendasVarejo").show()
 
+
 clientes = spark.read.format("parquet").load("/home/brunoaugp/download/Atividades/Clientes.parquet")
 clientes.write.saveAsTable("clientes")
 spark.sql("select * from clientes").show(10)
 
-
 vendas = spark.read.format("parquet").load("/home/brunoaugp/download/Atividades/Vendas.parquet")
 vendas.write.saveAsTable("vendas")
 spark.sql("select * from vendas").show(10)
-
 
 itensvendas = spark.read.format("parquet").load("/home/brunoaugp/download/Atividades/ItensVendas.parquet")
 itensvendas.write.saveAsTable("itensvendas")
@@ -33,8 +31,9 @@ vendedores = spark.read.format("parquet").load("/home/brunoaugp/download/Ativida
 vendedores.write.saveAsTable("vendedores")
 spark.sql("select * from vendedores").show(10)
 
-# 2. Criar consulta que mostre cada item vendido: Nome do cliente, Data da Venda, Produto, Vendedor e Valor total do item 
+spark.sql("show tables").show()
 
+# 2. Criar consulta que mostre cada item vendido: Nome do cliente, Data da Venda, Produto, Vendedor e Valor total do item 
 
 resp2 = itensvendas.join(produtos, itensvendas.ProdutoID == produtos.ProdutoID,"inner")\
     .join(vendas, itensvendas.VendasID == vendas.VendasID,"inner")\
@@ -45,16 +44,3 @@ resp2 = itensvendas.join(produtos, itensvendas.ProdutoID == produtos.ProdutoID,"
 resp2.show(20)
 
 resp2.write.format("parquet").save("/home/brunoaugp/resp2")
-
-
-
-
-
-
-
-
-
-
-
-
-
