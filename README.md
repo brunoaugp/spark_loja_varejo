@@ -33,6 +33,12 @@ Para realizar as atividades propostas, utilizou-se da seguinte estrutura:
 
 * Demonstrar o total de vendas agrupado por cada status.
 
+### Atividade 2:
+
+* Criar um banco de dados no DW do Spark nomeado VendasVarejo e persistir todas tabelas no BD;
+
+* Criar consulta que mostre cada item vendido: nome do cliente, data da venda, produto, vendedor e valor total do item.
+
 
 ## Arquivos de resolução
 
