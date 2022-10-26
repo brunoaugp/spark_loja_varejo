@@ -39,10 +39,14 @@ Para realizar as atividades propostas, utilizou-se da seguinte estrutura:
 
 * Criar consulta que mostre cada item vendido: nome do cliente, data da venda, produto, vendedor e valor total do item.
 
+### Atividade 3:
+
+* Criar uma aplicação Python/Spark que salve uma tabela em um banco de dados PostgreSQL a partir de um arquivo no computador Local, sendo o arquivo podendo ser de diferentes formatos(csv, parquet, etc); informando apenas o formato do arquivo, local do arquivo, nome da tabela a ser salva e banco de dados no PostgreSQL
+
 
 ## Arquivos de resolução
 
-Os arquivos de resolução se encontram anexados e separados por atividade. Consistem em scripts python e arquivos gerados no formato .parquet
+Os arquivos de resolução se encontram anexados e separados por atividade. Consistem em scripts python e arquivos exportados nos formatos parquet,csv,etc.
 
 _______
 ## Meta
